@@ -1,23 +1,32 @@
 
-const dog=(function (){
-    console.log("I'm Mary")
-});
-function receivesAFunction(spy) {
-    spy();
-  } 
-receivesAFunction(dog);
+// const dog=(function (){
+//     console.log("I'm Mary")
+// });
 
-function returnsANamedFunction(n) {
-      console.log(n)
-      if (n <= 1) {
-        return 1;
-      }
-      return n * returnsAnAnonymousFunction(n - 1);
-    };
+// const dog=(function (){
+//   console.log("I'm Mary")
+// });
+// function receivesAFunction(spy) {
+//     spy();
+//   } 
+// receivesAFunction(dog);
+
+
+var returnsANamedFunction= function fn() {};
+returnsANamedFunction.name;
+// var fn2=fn.name
+
+
+// function returnsANamedFunction(n=2) {
+//       console.log(n)
+//       if (n <= 1) {
+//         return 1;
+//       }
+//       return n * returnsANamedFunction(n);
+//     };
 function returnsAnAnonymousFunction(){
-    var fn;
     return (()=>console.log("Y"));
 }  
 
 //fn= returnsAnAnonymousFunction()
-done();
+// done();
